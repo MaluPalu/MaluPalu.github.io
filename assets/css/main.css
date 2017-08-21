@@ -1,1 +1,92 @@
-/* custom styles */
+.head_in {
+  text-align: center;
+  position: top;
+  width: 100%;
+  color: white;
+  background-color: gray;
+  background: url("../imgs/jakob-owens-224352.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 90%;
+  height: 475px;
+}
+.page_wrapper {
+  display: inline-block;
+  background-color: RGBA(0,0,0,0);
+  width: 100%;
+
+}
+body {
+  background-color: #C1C1C1;
+}
+
+.mySig {
+  width: 78px;
+  display: inline-block;
+}
+.lols {
+  width: 50px;
+  height: 50px;
+  border: #000 1px solid;
+}
+.nav {
+  display: inline-block;
+  position: relative;
+  right: 0px;
+}
+.nav-item {
+  display: block;
+  float: left;
+}
+.nav-link {
+color: RGBA(228,228,231,1);
+}
+.headers {
+  width: 100%;
+  font-size: 36px;
+}
+
+  .side1, .side2 {
+  width: 50%;
+  display: inline;
+}
+.side2 {
+
+  margin-left: -7px;
+}
+.side1 {
+  color: RGBA(255, 115, 32, 1);
+}
+h2 {
+  font-size: 1rem;
+
+}
+.footerImg {
+  margin: auto;
+  width: 3%;
+  border-radius: 50%;
+  position: absolute;
+}
+.personalPic {
+  border-radius: 50%;
+  width: 3%;
+}
+/* PROJECTS PAGE */
+.projectImg {
+  width: 100px;
+}
+.projDesc {
+  height: 0%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 10;
+  background-color: #C1C1C1;
+  top:0px;
+}
+.imageContainer {
+  position: relative;
+  z-index: 5;
+}
+.project {
+  position:relative;
+}
