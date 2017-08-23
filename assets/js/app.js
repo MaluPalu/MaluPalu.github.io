@@ -2,11 +2,31 @@
 jQuery(document).ready(function() {
 console.log("app.js linked.");
 
-//$(".footerImg").hover(function() {
-//  $(".personalPic").animate({
-//    "width": "40%"
- // });
-// });
+$(".nav-link").mouseover(function() {
+  $(this).animate({
+    "color": "RGBA(255, 115, 32, 1)"
+  })
+})
+$(".personalPic").mouseover(function() {
+ $(this).animate({
+   "width": "+20%"
+ });
+});
+$(".personalPic").mouseleave(function() {
+ $(this).animate({
+   "width": "+8%"
+ });
+});
+$(".mySig").mouseover(function() {
+ $(this).animate({
+   "width": "+200px"
+ });
+});
+$(".mySig").mouseleave(function() {
+ $(this).animate({
+   "width": "+8%"
+ });
+});
 
 let jQue = [
   {
@@ -29,37 +49,57 @@ let jQue = [
   }
 ];
 for (let i = 0; i < jQue.length; i++) {
+  let dropdown = document.createElement('img');
+  dropdown.src = "https://d30y9cdsu7xlg0.cloudfront.net/png/399048-200.png";
+  dropdown.className = "dropdownbutton";
+//createElement div/img for project container
   let p = document.createElement('div');
   let pImage = document.createElement('img');
+//set pImage src to sub i array loop and set className to projectImg
   pImage.src = jQue[i].img;
   pImage.className = 'projectImg';
+//createElement div/anchor tag for description container
   let pDesc = document.createElement('div');
   let pLink = document.createElement('a');
+//set link to site to href sub i array loop and its inner HTML to "visit", also description to sub i array loop
   pLink.href= jQue[i].url;
   pLink.innerHTML = "Visit";
   pDesc.innerHTML = jQue[i].desc + '<br />';
+//createElement div for name of project and set that to sub i array loop, also description className to projDesc
   let pName = document.createElement('div');
   pName.innerHTML = jQue[i].name;
+  pName.className = "projTitle"
   pDesc.className = "projDesc";
+//createElement pImageContainer and set its class name to imageContainer then set parent div to className project
   let pImageContainer = document.createElement('div');
   pImageContainer.className = 'imageContainer';
   p.className = 'project';
+
+//appendChild variables to created divs
   document.getElementById('projects').appendChild(p);
+  p.appendChild(dropdown);
   p.appendChild(pName);
   p.appendChild(pImageContainer);
   p.appendChild(pDesc);
   pDesc.appendChild(pLink);
   pImageContainer.appendChild(pImage);
 };
-
+//animate projectDesc to reveal once clicked
 $(".imageContainer").on("click", function() {
  $(this).next(".projDesc").animate({
    "height": "100%"
  });
 });
+//animate projDesc to hide when clicked again
 $(".projDesc").on("click", function() {
  $(this).animate({
    "height": "0%"
  });
+});
+$(".dropdownbutton").on("click", function() {
+  console.log("hello");
+  $(this).nextAll(".projDesc").animate({
+    "height": "100%"
+  });
 });
 });

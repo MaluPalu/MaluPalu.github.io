@@ -19,10 +19,6 @@
 body {
   background-color: #C1C1C1;
 }
-
-.mySig {
-  width: 78px;
-  display: inline-block;
 }
 .lols {
   width: 50px;
@@ -39,14 +35,17 @@ body {
   float: left;
 }
 .nav-link {
-color: RGBA(228,228,231,1);
+  color: #FFF;
+}
+.nav-link:hover {
+  color: RGBA(255, 115, 32, 1);
 }
 .headers {
   width: 100%;
   font-size: 36px;
 }
 
-  .side1, .side2 {
+.side1, .side2 {
   width: 50%;
   display: inline;
 }
@@ -59,17 +58,24 @@ color: RGBA(228,228,231,1);
 }
 h2 {
   font-size: 1rem;
-
 }
 .footerImg {
   margin: auto;
-  width: 3%;
   border-radius: 50%;
-  position: absolute;
+  position: relative;
 }
 .personalPic {
   border-radius: 50%;
-  width: 3%;
+  width: 8%;
+  border: 2px white solid;
+  display: block;
+  margin: auto;
+}
+.mySig {
+  width: 78px;
+  display: block;
+  margin: auto;
+
 }
 /* PROJECTS PAGE */
 .projectImg {
@@ -86,7 +92,41 @@ h2 {
 .imageContainer {
   position: relative;
   z-index: 5;
+
 }
 .project {
   position:relative;
+  margin: auto;
+  width: 200px;
+  float: left;
 }
+#projects {
+  width: 47%;
+  margin: auto;
+}
+.projTitle {
+  display: inline;
+}
+.projectsHead {
+  
+  margin: auto;
+  width: 380px;
+  font-size: 92px;
+}
+.dropdownbutton {
+  width: 35px;
+  display: inline-block;
+}
+/*Interests Page*/
+.clipArt {
+  border-radius: 50%;
+  width: 15%;
+}
+/*About Me*/
+.animation-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
